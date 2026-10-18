@@ -1,0 +1,34 @@
+<!-- Created: 2026-10-18 17:04 (KST) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digit Recognizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Handwritten Digit Recognizer</h1>
+    <p class="hint">Draw a digit (0-9) in the black box.</p>
+
+    <div class="layout">
+      <div class="pad">
+        <canvas id="pad" width="280" height="280" aria-label="Drawing area"></canvas>
+        <button id="clear" type="button">Clear</button>
+      </div>
+
+      <section class="result" aria-live="polite">
+        <div id="digit" class="digit">?</div>
+        <div id="confidence" class="confidence">Draw a digit</div>
+        <ol id="bars" class="bars" start="0"></ol>
+      </section>
+    </div>
+  </main>
+
+  <!-- Plain scripts (no modules) so the page also works when opened from disk -->
+  <script src="model_weights.js"></script>
+  <script src="recognizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
